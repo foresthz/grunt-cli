@@ -4,22 +4,33 @@
 
 process.title = 'grunt';
 
+// 可以加入自己的代码了
+console.info('my bin, haha');
+
 // Especially badass external libs.
 var findup = require('findup-sync');
 var resolve = require('resolve').sync;
 
-// Internal libs.
+// Internal libs. 调用内部文件了
+
+// 引入内部定义的模块,options是对象属性
+// 是注册进去的变量
+// 从其他目录引入模块
 var options = require('../lib/cli').options;
 var completion = require('../lib/completion');
 var info = require('../lib/info');
+
+// 又是一个库
 var path = require('path');
 
-
+// 这里没有使用single var模式
+// 获取当前目录
 var basedir = process.cwd();
 var gruntpath;
 
 // Do stuff based on CLI options.
 if ('completion' in options) {
+  // print是暴露的函数名
   completion.print(options.completion);
 } else if (options.version) {
   info.version();
@@ -30,6 +41,7 @@ if ('completion' in options) {
 }
 
 try {
+  // 读取grunt包
   gruntpath = resolve('grunt', {basedir: basedir});
 } catch (ex) {
   gruntpath = findup('lib/grunt.js');

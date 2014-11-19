@@ -7,6 +7,8 @@
  * https://github.com/gruntjs/grunt-init/blob/master/LICENSE-MIT
  */
 
+// 这里的grunt好像没有合并JS代码,而仅仅是做语法检查?
+
 'use strict';
 
 module.exports = function(grunt) {

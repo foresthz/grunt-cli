@@ -1,5 +1,5 @@
 {
-  "name": "grunt-cli",
+  "name": "grunt-cli0",
   "description": "The grunt command line interface.",
   "version": "0.1.13",
   "author": "Grunt Team",
@@ -18,7 +18,7 @@
     }
   ],
   "bin": {
-    "grunt": "bin/grunt"
+    "grunt0": "bin/grunt0"
   },
   "engines": {
     "node": ">= 0.8.0"
